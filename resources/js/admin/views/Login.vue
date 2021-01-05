@@ -96,12 +96,9 @@ export default {
         password: this.password
       };
       try {
-        await this.$store.dispatch("login", formData);
-        this.$router.push("/");
-        console.log(formData);
-        // eslint-disable-next-line no-empty
+          await this.$store.dispatch("login", formData);
       } catch (e) {}
     }
-  }
+  },
 };
 </script>

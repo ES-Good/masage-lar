@@ -18,6 +18,9 @@ export default {
     components: {
         AuthLayout,
         MainLayout
+    },
+    created() {
+        this.$store.dispatch('checkAuth')
     }
 };
 </script>

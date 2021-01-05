@@ -142,23 +142,19 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 return _this.$store.dispatch("login", formData);
 
               case 7:
-                _this.$router.push("/");
-
-                console.log(formData); // eslint-disable-next-line no-empty
-
-                _context.next = 13;
+                _context.next = 11;
                 break;
 
-              case 11:
-                _context.prev = 11;
+              case 9:
+                _context.prev = 9;
                 _context.t0 = _context["catch"](4);
 
-              case 13:
+              case 11:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, null, [[4, 11]]);
+        }, _callee, null, [[4, 9]]);
       }))();
     }
   }
@@ -347,7 +343,8 @@ render._withStripped = true
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   // eslint-disable-next-line prettier/prettier
-  "logout": "Вы вышли из системы"
+  "logout": "Вы вышли из системы",
+  "login": "Вы должны войти в систему!"
 });
 
 /***/ }),

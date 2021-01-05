@@ -104,18 +104,19 @@ export default {
     agree: { checked: v => v }
   },
   methods: {
-    submitHandler() {
+    async submitHandler() {
       if (this.$v.$invalid) {
         this.$v.$touch();
         return;
       }
-      this.$router.push("/");
+      this.$router.push("/admin");
       const formData = {
         email: this.email,
         password: this.password,
         name: this.name
       };
-      console.log(formData);
+      const response = await axios.post('/api/sanctum/register',formData)
+      console.log(response);
     }
   }
 };

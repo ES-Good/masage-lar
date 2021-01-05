@@ -1,5 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
+import store from '../store';
 
 Vue.use(VueRouter);
 
@@ -7,7 +8,7 @@ const routes = [
   {
     path: "/admin/",
     name: "Home",
-    meta: { layout: "main" },
+    meta: { layout: "main", auth: true },
     component: () => import("../views/Home.vue")
   },
   {
@@ -25,37 +26,37 @@ const routes = [
   {
     path: "/admin/categories",
     name: "categories",
-    meta: { layout: "main" },
+    meta: { layout: "main", auth: true },
     component: () => import("../views/Categories.vue")
   },
   {
     path: "/admin/detail-record",
     name: "detail-record",
-    meta: { layout: "main" },
+    meta: { layout: "main", auth: true },
     component: () => import("../views/DetailRecord.vue")
   },
   {
     path: "/admin/history",
     name: "history",
-    meta: { layout: "main" },
+    meta: { layout: "main", auth: true },
     component: () => import("../views/History.vue")
   },
   {
     path: "/admin/planning",
     name: "planning",
-    meta: { layout: "main" },
+    meta: { layout: "main", auth: true },
     component: () => import("../views/Planning.vue")
   },
   {
     path: "/admin/profile",
     name: "profile",
-    meta: { layout: "main" },
+    meta: { layout: "main", auth: true },
     component: () => import("../views/Profile.vue")
   },
   {
     path: "/admin/record",
     name: "record",
-    meta: { layout: "main" },
+    meta: { layout: "main", auth: true  },
     component: () => import("../views/Record.vue")
   }
 ];
@@ -65,5 +66,16 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes
 });
+
+router.beforeEach((to, from, next) => {
+    const currentUser = localStorage.getItem('token')
+    const requireAuth = to.matched.some(record => record.meta.auth)
+    if (requireAuth && !currentUser){
+        next('/admin/login?message=login')
+    }
+    else {
+        next()
+    }
+})
 
 export default router;
