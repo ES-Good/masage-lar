@@ -26,3 +26,5 @@ Route::prefix('sanctum')->group(function() {
 Route::middleware('auth:sanctum')->post('/check', function (Request $request) {
     return response()->json(['user' => $request->user()]);
 });
+
+Route::middleware('auth:sanctum')->post('/profile/update',[\App\Http\Controllers\API\ProfileController::class,'update']);

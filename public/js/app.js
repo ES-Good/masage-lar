@@ -39792,15 +39792,19 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 4:
                 response = _context2.sent;
                 commit('authorized', response.data);
-                _context2.next = 11;
+                _context2.next = 13;
                 break;
 
               case 8:
                 _context2.prev = 8;
                 _context2.t0 = _context2["catch"](1);
+                commit('logoutApp');
+                _router__WEBPACK_IMPORTED_MODULE_1__["default"].push({
+                  name: 'login'
+                });
                 throw _context2.t0;
 
-              case 11:
+              case 13:
               case "end":
                 return _context2.stop();
             }

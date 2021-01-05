@@ -41,7 +41,10 @@ export default {
                   commit('authorized',response.data)
 
               } catch (e) {
+                  commit('logoutApp')
+                  router.push({name:'login'})
                   throw e;
+
               }
           },
 
