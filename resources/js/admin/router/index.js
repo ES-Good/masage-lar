@@ -36,10 +36,10 @@ const routes = [
     component: () => import("../views/DetailRecord.vue")
   },
   {
-    path: "/admin/history",
-    name: "history",
+    path: "/admin/journal",
+    name: "journal",
     meta: { layout: "main", auth: true },
-    component: () => import("../views/History.vue")
+    component: () => import("../views/Journal.vue")
   },
   {
     path: "/admin/planning",

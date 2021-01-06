@@ -2196,12 +2196,12 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       links: [{
-        title: "Счет",
+        title: "DashBoard",
         url: "/admin/",
         exact: true
       }, {
-        title: "История",
-        url: "/admin/history"
+        title: "Журнал",
+        url: "/admin/journal"
       }, {
         title: "Планирование",
         url: "/admin/planning"
@@ -39591,7 +39591,7 @@ var routes = [{
     auth: true
   },
   component: function component() {
-    return __webpack_require__.e(/*! import() */ 2).then(__webpack_require__.bind(null, /*! ../views/Home.vue */ "./resources/js/admin/views/Home.vue"));
+    return __webpack_require__.e(/*! import() */ 4).then(__webpack_require__.bind(null, /*! ../views/Home.vue */ "./resources/js/admin/views/Home.vue"));
   }
 }, {
   path: "/admin/login",
@@ -39600,7 +39600,7 @@ var routes = [{
     layout: "auth"
   },
   component: function component() {
-    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(1)]).then(__webpack_require__.bind(null, /*! ../views/Login.vue */ "./resources/js/admin/views/Login.vue"));
+    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(3)]).then(__webpack_require__.bind(null, /*! ../views/Login.vue */ "./resources/js/admin/views/Login.vue"));
   }
 }, {
   path: "/admin/register",
@@ -39609,7 +39609,7 @@ var routes = [{
     layout: "auth"
   },
   component: function component() {
-    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(3)]).then(__webpack_require__.bind(null, /*! ../views/Register.vue */ "./resources/js/admin/views/Register.vue"));
+    return Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(5)]).then(__webpack_require__.bind(null, /*! ../views/Register.vue */ "./resources/js/admin/views/Register.vue"));
   }
 }, {
   path: "/admin/categories",
@@ -39619,7 +39619,7 @@ var routes = [{
     auth: true
   },
   component: function component() {
-    return __webpack_require__.e(/*! import() */ 4).then(__webpack_require__.bind(null, /*! ../views/Categories.vue */ "./resources/js/admin/views/Categories.vue"));
+    return __webpack_require__.e(/*! import() */ 6).then(__webpack_require__.bind(null, /*! ../views/Categories.vue */ "./resources/js/admin/views/Categories.vue"));
   }
 }, {
   path: "/admin/detail-record",
@@ -39629,17 +39629,17 @@ var routes = [{
     auth: true
   },
   component: function component() {
-    return __webpack_require__.e(/*! import() */ 5).then(__webpack_require__.bind(null, /*! ../views/DetailRecord.vue */ "./resources/js/admin/views/DetailRecord.vue"));
+    return __webpack_require__.e(/*! import() */ 7).then(__webpack_require__.bind(null, /*! ../views/DetailRecord.vue */ "./resources/js/admin/views/DetailRecord.vue"));
   }
 }, {
-  path: "/admin/history",
-  name: "history",
+  path: "/admin/journal",
+  name: "journal",
   meta: {
     layout: "main",
     auth: true
   },
   component: function component() {
-    return __webpack_require__.e(/*! import() */ 6).then(__webpack_require__.bind(null, /*! ../views/History.vue */ "./resources/js/admin/views/History.vue"));
+    return __webpack_require__.e(/*! import() */ 1).then(__webpack_require__.bind(null, /*! ../views/Journal.vue */ "./resources/js/admin/views/Journal.vue"));
   }
 }, {
   path: "/admin/planning",
@@ -39649,7 +39649,7 @@ var routes = [{
     auth: true
   },
   component: function component() {
-    return __webpack_require__.e(/*! import() */ 7).then(__webpack_require__.bind(null, /*! ../views/Planning.vue */ "./resources/js/admin/views/Planning.vue"));
+    return __webpack_require__.e(/*! import() */ 8).then(__webpack_require__.bind(null, /*! ../views/Planning.vue */ "./resources/js/admin/views/Planning.vue"));
   }
 }, {
   path: "/admin/profile",
@@ -39659,7 +39659,7 @@ var routes = [{
     auth: true
   },
   component: function component() {
-    return __webpack_require__.e(/*! import() */ 8).then(__webpack_require__.bind(null, /*! ../views/Profile.vue */ "./resources/js/admin/views/Profile.vue"));
+    return __webpack_require__.e(/*! import() */ 2).then(__webpack_require__.bind(null, /*! ../views/Profile.vue */ "./resources/js/admin/views/Profile.vue"));
   }
 }, {
   path: "/admin/record",

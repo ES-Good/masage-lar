@@ -28,3 +28,5 @@ Route::middleware('auth:sanctum')->post('/check', function (Request $request) {
 });
 
 Route::middleware('auth:sanctum')->post('/profile/update',[\App\Http\Controllers\API\ProfileController::class,'update']);
+
+Route::middleware('auth:sanctum')->get('/orders',[\App\Http\Controllers\API\OrderController::class,'index']);

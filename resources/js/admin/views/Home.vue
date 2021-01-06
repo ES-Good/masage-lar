@@ -53,6 +53,15 @@
 <script>
 export default {
     name: 'Home',
-
+    methods:{
+        fetch(){
+            axios.get('/api/orders').then(response => {
+                console.log(response.data.length)
+            })
+        }
+    },
+    mounted() {
+        this.fetch()
+    }
 }
 </script>

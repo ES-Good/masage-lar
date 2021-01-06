@@ -17,8 +17,8 @@ export default {
   props: ["value"],
   data: () => ({
     links: [
-      { title: "Счет", url: "/admin/", exact: true },
-      { title: "История", url: "/admin/history" },
+      { title: "DashBoard", url: "/admin/", exact: true },
+      { title: "Журнал", url: "/admin/journal" },
       { title: "Планирование", url: "/admin/planning" },
       { title: "Новая запись", url: "/admin/record" },
       { title: "Категории", url: "/admin/categories" }

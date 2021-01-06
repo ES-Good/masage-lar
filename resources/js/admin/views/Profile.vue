@@ -3,16 +3,15 @@
     <div class="page-title">
       <h3>Профиль</h3>
     </div>
-
     <form class="form">
-      <div class="input-field">
-        <input v-model="name" id="name" type="text"  />
-        <label for="name">Имя</label>
-        <span class="helper-text invalid">name</span>
-      </div>
         <div class="input-field">
-            <input v-model="email" id="email" type="text"  />
-            <label for="email">Email</label>
+            <input v-model="name" placeholder="Placeholder" id="name" type="text" class="validate">
+            <label for="name" class="active">Имя</label>
+            <span class="helper-text invalid">name</span>
+        </div>
+        <div class="input-field">
+            <input v-model="email" id="email"  placeholder="Placeholder" type="text" class="validate"  />
+            <label for="email" class="active">Email</label>
             <span class="helper-text invalid">Email</span>
         </div>
         <div class="input-field">
@@ -60,7 +59,7 @@ export default {
                    password: this.password
                })
                if (response.status === 200){
-                   M.toast({html: "Данные успешно обновлены"})
+                   M.toast({html: "Данные успешно обновлены",classes: 'success-toast'})
                }
            }catch (e){
                M.toast({html: e.message})
@@ -73,3 +72,8 @@ export default {
     }
 }
 </script>
+<style>
+  .success-toast{
+     background-color: #2d995b;
+ }
+</style>
