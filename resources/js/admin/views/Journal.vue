@@ -24,9 +24,6 @@
                         </select>
                         <label>Статус</label>
                 </div>
-                <div class="input-field col s2">
-                    <input type="text" class="datepicker">
-                </div>
                 <div class="input-field col s3">
                     <button class="btn waves-effect waves-light red" type="submit" name="action" @click.prevent="fetch">
                        Применить
@@ -92,7 +89,7 @@ export default {
                params:{
                    name: this.name,
                    phone: this.phone,
-                   status: this.status
+                   status: this.status,
                }
            }).then(response => {
                 console.log(response.data.length)
@@ -108,8 +105,6 @@ export default {
         }
     },
     mounted() {
-        const elems = document.querySelectorAll('.datepicker');
-        const instances = M.Datepicker.init(elems);
         const select = document.querySelectorAll('select');
         const selectInstances = M.FormSelect.init(select);
 

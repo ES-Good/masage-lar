@@ -91,9 +91,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Journal',
   data: function data() {
@@ -142,8 +139,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     }
   },
   mounted: function mounted() {
-    var elems = document.querySelectorAll('.datepicker');
-    var instances = M.Datepicker.init(elems);
     var select = document.querySelectorAll('select');
     var selectInstances = M.FormSelect.init(select);
     this.fetch();
@@ -321,8 +316,6 @@ var render = function() {
             _c("label", [_vm._v("Статус")])
           ]),
           _vm._v(" "),
-          _vm._m(1),
-          _vm._v(" "),
           _c("div", { staticClass: "input-field col s3" }, [
             _c(
               "button",
@@ -340,7 +333,7 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
-          _vm._m(2)
+          _vm._m(1)
         ])
       ])
     ]),
@@ -353,7 +346,7 @@ var render = function() {
     _vm._v(" "),
     _c("section", [
       _c("table", { staticClass: "responsive-table" }, [
-        _vm._m(3),
+        _vm._m(2),
         _vm._v(" "),
         _c(
           "tbody",
@@ -385,7 +378,7 @@ var render = function() {
                 )
               ]),
               _vm._v(" "),
-              _vm._m(4, true)
+              _vm._m(3, true)
             ])
           }),
           0
@@ -401,14 +394,6 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "page-title" }, [
       _c("h3", [_vm._v("Журнал записей")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "input-field col s2" }, [
-      _c("input", { staticClass: "datepicker", attrs: { type: "text" } })
     ])
   },
   function() {
