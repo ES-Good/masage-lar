@@ -11,5 +11,13 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/admin/app.js', 'public/js');
-    //.sass('resources/sass/app.scss', 'public/css');
+mix.js('resources/js/admin/app.js', 'public/js/admin-app.js')
+    .js('resources/js/app.js', 'public/js')
+    .js('resources/js/other_script.js', 'public/js/other_script.js')
+    .sass('resources/sass/app.scss', 'public/css')
+    .postCss('resources/css/main.css', 'public/css/main.css')
+    .postCss('resources/css/media.css', 'public/css/media.css');
+
+if (mix.inProduction()) {
+    mix.version().sourceMaps();
+}

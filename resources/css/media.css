@@ -1,0 +1,1213 @@
+@media screen and (max-width: 1750px) {
+    .faster {
+        padding-bottom: 165px;
+    }
+}
+
+@media screen and (max-width: 1650px) {
+    /* get */
+    .dengi {
+        right: -100px;
+    }
+    /* get */
+    .faster {
+        padding-bottom: 115px;
+    }
+}
+
+@media screen and (max-width: 1590px) {
+    /* poll */
+    .poll-card {
+        display: flex;
+        justify-content: center;
+    }
+    .substrate-quiz {
+        width: 1109px;
+        height: 530px;
+        top: 25px;
+    }
+    .poll-quiz {
+        width: 1070px;
+        height: 580px;
+        margin-left: 0;
+    }
+    .gig-cash {
+        width: 530px;
+        height: 486px;
+        margin-right: 50px;
+    }
+    .title-quiz {
+        font-size: 39px;
+        line-height: 45px;
+        margin-bottom: 22px;
+    }
+    .credit-at-rate {
+        margin-bottom: 20px;
+    }
+    .quiz-text--info__bottom {
+        margin-bottom: 20px;
+    }
+    .pool-quiz__text {
+        font-size: 20px;
+        line-height: 24px;
+        width: 400px;
+        margin-bottom: 30px;
+    }
+    .subtitle-quiz {
+        font-size: 20px;
+        line-height: 23px;
+        margin-bottom: 30px;
+    }
+    .btn-group {
+        margin-bottom: 25px;
+    }
+    .btn-secondary {
+        width: 220px;
+    }
+    .btn-further {
+        padding: 17px 70px;
+    }
+    .kupyra {
+        bottom: -38px;
+        right: -23px;
+        width: 151px;
+        height: 135px;
+    }
+    /* poll */
+}
+
+@media screen and (max-width: 1515px) {
+    .percent {
+        justify-content: space-around !important;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .info {
+        padding: 0 20px 130px 20px;
+    }
+    .info-money {
+        width: 70px;
+    }
+    .info__help-img {
+        width: 300px;
+        right: 27%
+    }
+    /* faster */
+    .faster__money--1 {
+        width: 120px;
+        left: -9%;
+    }
+    .faster__money--2 {
+        width: 120px;
+        top: -8%;
+        right: 7%;
+    }
+    .faster__money--3 {
+        width: 120px;
+    }
+}
+
+@media (max-width: 1480px) {
+    /* navigation */
+    .navbar-brand {
+        margin-right: 60px;
+    }
+    .nav-link {
+        font-size: 14px;
+        padding: 0.2rem 0.5rem !important;
+    }
+    .header__mobile {
+        font-size: 20px;
+    }
+    /* navigation */
+    /* header */
+    .header {
+        background-position-y: -75px;
+        background-position-x: center;
+        background-size: 1480px 615px;
+    }
+    .percent {
+        padding-top: 140px;
+        z-index: 1;
+    }
+    .percent__one-hundrerd {
+        font-size: 55px;
+        line-height: 67px;
+    }
+    .percent__six {
+        width: 270px;
+        font-size: 40px;
+        line-height: 45px;
+    }
+    .percent__history {
+        margin-bottom: 40px;
+    }
+    .woman-money {
+        height: 450px;
+        width: 370px;
+        margin-top: -93px;
+    }
+    .percent-right-block {
+        margin-right: 40px;
+    }
+    /* header */
+}
+
+@media screen and (max-width: 1400px) {
+    /* get */
+    .dengi {
+        display: none;
+    }
+    /* get */
+}
+
+@media screen and (max-width: 1350px) {
+    .info-money {
+        display: none;
+    }
+    .info__help-title {
+        font-size: 36px;
+    }
+    .info__help-subtitle {
+        font-size: 24px;
+    }
+    .info__help-text {
+        font-size: 16px;
+    }
+    .info__help-img {
+        right: 33%
+    }
+    /* faster */
+    .faster__money--1 {
+        display: none;
+    }
+    .faster__money--2 {
+        display: none;
+    }
+    .faster__money--3 {
+        display: none;
+    }
+    .faster__col-img {
+        width: 350px;
+    }
+}
+
+@media (max-width: 1200px) {
+    /* header */
+    .header {
+        background-position-y: -45px;
+        background-size: 1200px 436px;
+    }
+    .percent {
+        padding-top: 70px;
+    }
+    .percent__one-hundrerd {
+        font-size: 45px;
+        line-height: 55px;
+    }
+    .percent__six {
+        width: 235px;
+        font-size: 35px;
+        line-height: 40px;
+    }
+    .percent__history {
+        width: 250px;
+        margin-bottom: 20px;
+        font-size: 16px;
+        line-height: 23px;
+    }
+    .woman-money {
+        height: 353px;
+        width: 300px;
+        margin-top: -45px;
+    }
+    .percent__information {
+        width: 281px;
+        font-size: 14px;
+        line-height: 21px;
+    }
+    /* header */
+    /* calc */
+    .calc__text {
+        font-size: 16px;
+    }
+    .calc__img {
+        margin-right: 30px;
+    }
+    .calc__calc-payment {
+        font-size: 12px;
+    }
+    .calc__calc-offer {
+        font-size: 16px;
+    }
+    /* calc */
+    /* info */
+    .info__card {
+        padding: 30px 20px 35px 20px;
+    }
+    .info__card-box--left {
+        margin-right: 10px;
+    }
+    .info__help {
+        padding: 70px;
+    }
+    .info__help-img {
+        width: 240px;
+        right: 28%
+    }
+    .info__help-button {
+        padding: 20px 30px;
+    }
+    /* info */
+    /* poll */
+    .poll {
+        margin-top: -20px;
+    }
+    .substrate-quiz {
+        width: 640px;
+        height: 555px;
+    }
+    .poll-quiz {
+        width: 600px;
+        height: auto;
+        justify-content: center;
+    }
+    .gig-cash {
+        display: none;
+    }
+    .poll-quiz--right {
+        margin: 40px 0 40px 0;
+    }
+    .subtitle-quiz {
+        width: 350px;
+    }
+    .at-rare__title {
+        width: 140px;
+    }
+    .quiz-text--info__top {
+        width: 280px;
+        font-size: 12px;
+        line-height: 14px;
+    }
+    .btn-secondary {
+        font-size: 13px;
+        line-height: 15px;
+        width: 194px;
+    }
+    .quiz-back {
+        font-size: 16px;
+        line-height: 19px;
+        padding: 13px 25px;
+    }
+    .btn-further {
+        font-size: 16px;
+        line-height: 19px;
+        padding: 14px 60px;
+    }
+    .kupyra {
+        bottom: -11px;
+        right: -47px;
+        width: 107px;
+        height: 105px;
+    }
+    /* poll */
+    /* faster */
+    .faster__col-img {
+        width: 300px;
+    }
+    .faster__col--pink {
+        margin-right: 0;
+    }
+    .faster__col--green {
+        margin-right: 10px;
+    }
+    .faster__row {
+        justify-content: space-between;
+    }
+    /* faster */
+    /* reviews */
+    .video-reviews {
+        padding: 0 10px;
+    }
+    .video--slide__reviews {
+        margin-right: 40px;
+    }
+    /* reviews */
+    /* footer */
+    .footer-main__top img {
+        margin-right: 30px;
+    }
+    .main__top--list li a {
+        margin-right: 10px;
+    }
+    .schedule {
+        margin-right: 78px;
+    }
+    /* footer */
+}
+
+@media screen and (max-width: 1000px) {
+    .calc__text {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .calc__calc-input {
+        font-size: 18px;
+    }
+    .calc__calc {
+        padding: 30px 20px
+    }
+    .calc__calc-approval {
+        margin-right: 30px;
+    }
+    .calc__calc-input {
+        width: 250px;
+    }
+    .calc__card-box {
+        flex-basis: 70%;
+    }
+    .calc__calc-bet {
+        padding: 15px 5px;
+    }
+    .calc__button {
+        padding: 20px 7px;
+    }
+    .calc__calc-text {
+        line-height: 12PX;
+    }
+    /* reviews */
+    .general-block {
+        flex-direction: column;
+    }
+    .reviews-title {
+        margin-bottom: 70px;
+    }
+    .video__block--slider {
+        margin: 0 auto;
+    }
+    /* reviews */
+}
+
+@media (max-width: 992px) {
+    /* navigation */
+    .navbar-brand {
+        margin-right: 10px;
+    }
+    .navbar-brand img {
+        width: 136px;
+    }
+    .nav-link {
+        padding: 0.2rem 0.3rem !important;
+    }
+    .header__mobile {
+        font-size: 15px;
+    }
+    /* navigation */
+    /* header */
+    .header {
+        background-position-y: -50px;
+        background-size: 991px 380px;
+    }
+    .percent {
+        padding-top: 35px;
+    }
+    .percent__one-hundrerd {
+        font-size: 33px;
+        line-height: 38px;
+    }
+    .percent__six {
+        width: 235px;
+        font-size: 30px;
+        line-height: 35px;
+    }
+    .percent__history {
+        width: 240px;
+        margin-bottom: 20px;
+        font-size: 21px;
+        line-height: 23px;
+    }
+    .woman-money {
+        height: 256px;
+        width: 215px;
+        margin-top: 48px;
+    }
+    .percent-right-block {
+        padding-top: 5px;
+        margin-right: 0px;
+    }
+    .percent__information {
+        width: 256px;
+        font-size: 13px;
+        line-height: 21px;
+    }
+    /* header */
+    /* info */
+    .info {
+        padding: 0 20px 60px 20px;
+    }
+    .info__info-container {
+        margin-bottom: 110px;
+    }
+    .info__info-text {
+        font-size: 16px;
+    }
+    .info__card {
+        margin-bottom: 35px;
+    }
+    .row-card {
+        justify-content: center;
+    }
+    .info__card {
+        margin-right: 20px;
+    }
+    .info__section-title {
+        text-align: center;
+    }
+    .info__help {
+        padding: 100px 25px 25px 25px;
+        margin-bottom: 70px;
+    }
+    .info__help-title {
+        font-size: 24px;
+        line-height: 28px;
+    }
+    .info__help-subtitle {
+        font-size: 18px;
+        line-height: 21px;
+        margin-bottom: 30px;
+    }
+    .info__help-text {
+        font-size: 16px;
+        line-height: 140%;
+    }
+    .info__help-text {
+        max-width: 390px;
+    }
+    /* info */
+    /* faster */
+    .faster {
+        padding-top: 60px;
+    }
+    .faster__ellipse {
+        display: none;
+    }
+    .faste__col-title {
+        margin-bottom: 15px;
+        font-size: 16px;
+    }
+    .faster__col-text {
+        margin-bottom: 20px;
+    }
+    .faster__col-img {
+        width: 200px;
+    }
+    /* faster */
+    /* question */
+    .questions__question-header {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .questions__question-content {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    /* question */
+    /* footer */
+    .footer-big--block {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 110px;
+    }
+    .footer-main {
+        margin-bottom: 40px;
+        flex-direction: row;
+    }
+    .footer-main__top {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 0px;
+        align-items: start;
+        flex-direction: column;
+    }
+    .footer-main__top img {
+        width: 136px;
+        height: 35px;
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    .main__top--list {
+        flex-direction: column;
+    }
+    .main__top--list li {
+        margin-bottom: 10px;
+    }
+    .main__top--list li:last-child {
+        margin-bottom: 0px;
+    }
+    .main__top--list li a {
+        margin-right: 0px;
+    }
+    .main__top--list::before {
+        width: 287px;
+        bottom: -30px;
+    }
+    .footer-main__bottom {
+        padding-top: 67px;
+        flex-direction: column;
+    }
+    .schedule {
+        margin-bottom: 35px;
+        margin-right: 0px;
+        position: relative;
+    }
+    .schedule::before {
+        content: '';
+        display: table;
+        width: 148px;
+        height: 1px;
+        position: absolute;
+        bottom: -19px;
+        background-color: #4C8CC8;
+    }
+    .schedule--time {
+        width: 85px;
+    }
+    .schedule--address {
+        width: 150px;
+        font-size: 14px;
+    }
+    .footer-text {
+        text-align: center;
+    }
+    /* footer */
+    /* modal */
+    .modal-content {
+        padding: 20px 0 30px 30px;
+    }
+    .modal-dialog {
+        max-width: 468px;
+    }
+    /* modal */
+}
+
+@media screen and (max-width: 850px) {
+    .faster__col-img {
+        display: none;
+    }
+}
+
+@media (max-width: 835px) {
+    /* modal */
+    .modal-dialog {
+        max-width: 315px !important;
+        margin: 1.75rem auto !important;
+    }
+    .modal-body--content__right {
+        display: none;
+    }
+    .modal-content {
+        padding: 20px 10px 21px 20px;
+    }
+    .title-modal {
+        font-size: 36px;
+        line-height: 44px;
+    }
+    .modal-body__text {
+        font-size: 14px;
+        line-height: 17px;
+        width: 275px;
+    }
+    /* modal */
+}
+
+@media (max-width: 767px) {
+    /* navigation */
+    .fixed-nav {
+        position: inherit;
+        z-index: auto;
+    }
+    .navbar {
+        background-color: #fff;
+        z-index: 10;
+        top: 0;
+        position: absolute;
+        right: 0;
+        left: 0;
+    }
+    .navigation {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .header-text-top {
+        font-size: 18px;
+        line-height: 22px;
+        padding: 65px 0 5px 0;
+    }
+    .nav-link {
+        font-size: 16px;
+        padding: 0.2rem 0.5rem !important;
+    }
+    .header__mobile {
+        font-size: 20px;
+    }
+    /* navigation */
+    /* header */
+    .header {
+        border: none;
+        background-position-y: 268px;
+        background-size: auto;
+        background-position-x: -15px;
+        background-size: 767px 480px;
+    }
+    .percent__one-hundrerd {
+        font-size: 50px;
+        line-height: 55px;
+    }
+    .percent__one-hundrerd {
+        font-size: 50px;
+        line-height: 55px;
+    }
+    .percent__history {
+        width: 320px;
+        margin-bottom: 30px;
+        font-size: 21px;
+        line-height: 23px;
+    }
+    .percent__apply {
+        display: block;
+        margin: 0 auto;
+    }
+    .woman-money {
+        display: none;
+    }
+    .percent-right-block {
+        padding-top: 0px;
+        margin-right: 0px;
+    }
+    .percent__information {
+        width: 360px;
+        font-size: 18px;
+        line-height: 21px;
+    }
+    /* header */
+    /* calc */
+    .calc {
+        margin-bottom: 100px;
+        padding: 30px 0;
+    }
+    .calc__row {
+        flex-direction: column;
+        height: auto;
+    }
+    .calc__card-box {
+        padding: 0 20px;
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .calc__card {
+        width: 49%;
+        margin-bottom: 10px;
+        border: none;
+    }
+    .calc__calc {
+        border: none;
+        border-radius: 0;
+    }
+    .calc__calc-bet {
+        padding: 15px 10px;
+    }
+    .calc__button {
+        padding: 20px 50px;
+    }
+    .calc__calc-input {
+        width: 370px;
+    }
+    /* calc */
+    /* arrange */
+    .arrange-title {
+        width: 310px;
+        margin-bottom: 40px;
+    }
+    /* arrange */
+    /* info */
+    .info__help {
+        padding-top: 130px;
+        text-align: center;
+        justify-content: center;
+        border-radius: 8px;
+    }
+    .info__card-box--left {
+        margin-right: 25px;
+    }
+    .info__card {
+        padding: 30px 65px 35px 40px;
+    }
+    .info__help-img {
+        display: none;
+    }
+    .info__help-button {
+        display: none;
+    }
+    .info__help-img--mobile {
+        display: block;
+        position: absolute;
+        top: -45px;
+    }
+    .info__help-text {
+        margin-bottom: 40px;
+    }
+    .info__help-connection {
+        display: flex;
+    }
+    /* info */
+    /* question */
+    .questions__img {
+        width: 300px;
+    }
+    .question__title {
+        margin-bottom: 25px;
+    }
+    .questions__box {
+        padding-top: 0;
+    }
+    /* question */
+    /* poll */
+    .title-quiz {
+        width: 400px;
+    }
+    .substrate-quiz {
+        width: 500px;
+        height: 555px;
+    }
+    .poll-quiz {
+        width: 460px;
+    }
+    /* poll */
+    /* reviews */
+    .video__block--slider {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .video--slide__reviews {
+        margin: 0 20px;
+    }
+    .video--slide__reviews:last-child {
+        margin: 0 20px;
+    }
+    /* reviews */
+}
+
+@media screen and (max-width: 700px) {
+    /* faster */
+    .faster {
+        padding-top: 60px;
+    }
+    .faster__ellipse {
+        display: none;
+    }
+    .faster__row {
+        align-items: center;
+    }
+    .faster__title {
+        margin: auto;
+        margin-bottom: 40px;
+        max-width: 280px;
+    }
+    .faster__title h3 {
+        font-size: 30px;
+        line-height: 35px;
+    }
+    .faster__col--pink {
+        margin-right: 0;
+        background-image: none;
+        background: #FFEBF0;
+        border-radius: 6px;
+        width: 280px;
+        margin-left: 0;
+        margin-top: 0;
+        padding: 30px 20px;
+        height: auto;
+    }
+    .faster__col--green {
+        background-image: none;
+        background: #E0F3ED;
+        border-radius: 6px;
+        width: 280px;
+        padding: 30px 20px;
+        margin-right: 0;
+    }
+    .faster__container {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    /* get */
+    .get--card {
+        justify-content: space-around !important;
+        width: 135px;
+        height: 135px;
+        flex-direction: column;
+    }
+    .get--card img {
+        margin-right: 0px;
+    }
+    .get--card p {
+        font-size: 14px;
+        line-height: 16px;
+        width: 117px;
+        text-align: center;
+    }
+    /* get */
+    .faster__row {
+        flex-direction: column;
+    }
+    .faster__col--pink {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    /* navigation */
+    .header-text-top {
+        font-size: 18px;
+    }
+    /* navigation */
+    /* header */
+    .header {
+        background-position-y: 123px;
+        background-size: 767px 417px;
+    }
+    .percent__one-hundrerd {
+        font-size: 30px;
+        line-height: 35px;
+    }
+    .percent__six {
+        width: 265px;
+        font-size: 20px;
+        line-height: 23px;
+    }
+    .percent__history {
+        width: 244px;
+        margin-bottom: 0px;
+        font-size: 16px;
+        line-height: 19px;
+    }
+    .percent__apply {
+        display: none;
+    }
+    .percent__information {
+        width: 250px;
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .percent-fixed {
+        bottom: 25px;
+    }
+    .btn-phone__number {
+        padding: 18px;
+        background: #DB4886;
+        box-sizing: border-box;
+        border-radius: 6px;
+    }
+    /* header */
+    /* calc */
+    .calc {
+        margin-bottom: 60px;
+    }
+    .calc__calc {
+        width: 100%;
+        position: relative;
+    }
+    .calc__card-box {
+        flex-direction: column;
+    }
+    .calc__card {
+        width: 100%;
+        padding: 20px
+    }
+    .row-input {
+        flex-direction: column;
+        align-items: center;
+    }
+    .calc__calc-approval {
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+    .calc__calc-input-group {
+        width: 100%;
+    }
+    .calc__calc-input {
+        width: 100%;
+    }
+    .calc__row {
+        height: auto;
+    }
+    .row-payment {
+        flex-direction: column;
+        align-items: center;
+    }
+    .calc__button {
+        width: 100%;
+    }
+    .calc__calc-bet-wrap {
+        margin-bottom: 70px;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .calc__calc-bet {
+        width: 130px;
+    }
+    .calc__calc-payment {
+        margin-bottom: 30px;
+    }
+    .row-calc-card {
+        display: none;
+    }
+    .calc__calc-offer {
+        position: absolute;
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 60%;
+    }
+    .calc__img img {
+        width: 50px;
+    }
+    .calc__select-wrap {
+        display: block;
+    }
+    /* calc */
+    /* arrange */
+    .arrange-title {
+        width: 270px;
+    }
+    /* arramge */
+    /* get */
+    .get {
+        padding-top: 50px;
+        margin-bottom: 60px;
+    }
+    .get-title {
+        width: 250px;
+        margin-bottom: 35px;
+    }
+    .get-block {
+        padding-bottom: 60px;
+    }
+    /* get */
+    /* info */
+    .info {
+        padding: 0 20px 60px 20px;
+        background-image: none;
+        padding-right: 0;
+    }
+    .info__info-text {
+        max-width: 97%;
+        margin-bottom: 40px;
+    }
+    .info__info-img-box {
+        display: none;
+    }
+    .info__info-img {
+        display: none;
+    }
+    .info__slider-wrap {
+        display: block;
+    }
+    .info__help-wrap {
+        padding-right: 20px;
+    }
+    .info__help {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    .info__help-text {
+        max-width: 256px;
+    }
+    .info__section-title {
+        text-align: left;
+        max-width: 278px;
+        margin: auto;
+        margin-bottom: 40px;
+    }
+    .info__section-title--top {
+        margin-left: 0;
+    }
+    .info__help-subtitle {
+        max-width: 200px;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+    .info__card {
+        margin-right: 0;
+        border: none;
+        padding: 0;
+    }
+    .section-title h3 {
+        font-size: 30px;
+        line-height: 35px;
+    }
+    .section-title p {
+        font-size: 24px;
+    }
+    .info__help-text--first {
+        display: inline;
+    }
+    /* info */
+    /* question */
+    .questions__img {
+        display: none;
+    }
+    .question__title {
+        max-width: 200px;
+    }
+    .questions__box {
+        flex-basis: 100%;
+    }
+    /* question */
+    /* poll */
+    .poll .container {
+        padding: 0;
+    }
+    .substrate-quiz {
+        display: none;
+    }
+    .poll-quiz {
+        width: 100%;
+        border-radius: inherit;
+        border: none;
+        background: #FFEBF0;
+    }
+    .poll-quiz--right {
+        margin: 40px 22px;
+    }
+    .title-quiz {
+        font-size: 30px;
+        line-height: 35px;
+        margin-bottom: 12px;
+        width: 250px;
+    }
+    .pool-quiz__text {
+        font-size: 14px;
+        line-height: 16px;
+        width: 240px;
+        margin-bottom: 20px
+    }
+    .quiz-back {
+        border: none;
+        text-decoration: underline;
+        color: #DAADB8;
+        background: none;
+        padding: 13px 0;
+        margin-right: 58px;
+    }
+    .quiz-back:hover {
+        margin-right: 58px;
+        background: transparent;
+        border: none;
+    }
+    .quiz-back:focus {
+        margin-right: 58px;
+        background: transparent;
+        border: none;
+    }
+    .subtitle-quiz {
+        font-size: 18px;
+        line-height: 23px;
+        margin-bottom: 30px;
+        width: 275px;
+    }
+    .btn-group {
+        height: auto;
+        margin-bottom: 25px;
+    }
+    .btn-secondary {
+        width: 275px;
+    }
+    .kupyra {
+        display: none;
+    }
+    /* poll */
+    /* reviews */
+    .desctop-reviews__block {
+        display: none !important;
+    }
+    .general-block {
+        display: block !important;
+    }
+    .video-reviews {
+        padding: 0px;
+    }
+    /* reviews */
+    /* modal */
+    .modal-thanks {
+        width: 315px;
+    }
+    .modal-thanks__content {
+        padding: 70px 0 0 0;
+    }
+    .thanks__content--text {
+        font-size: 14px;
+        line-height: 17px;
+        margin-bottom: 120px;
+    }
+    /* modal */
+}
+
+@media (max-width: 425px) {
+    /* navigation */
+    .header-text-top {
+        font-size: 14px;
+    }
+    /* navigation */
+    /* arrange */
+    .arrange-block {
+        display: none !important;
+    }
+    .arrange-slider__block {
+        display: block !important;
+    }
+    .arrange-slider__block .slick-slide {
+        margin: 0 10px;
+    }
+    .arrange-section__card {
+        height: 205px;
+        padding-left: 20px;
+        padding-top: 20px;
+    }
+    .arrange-section__card img {
+        width: 55px;
+        height: 55px;
+        margin-bottom: 8px;
+    }
+    .arange-title {
+        margin-bottom: 8px;
+        font-size: 16px;
+        line-height: 19px;
+    }
+    .arrange-section--list {
+        font-size: 13px;
+        line-height: 14px;
+    }
+    .arrange-section--list li::after {
+        top: 6px;
+        left: 6px;
+    }
+    /* arrange */
+    /* reviews */
+    .video__block--slider {
+        display: block;
+    }
+    .video--slide__reviews {}
+    .video-reviews {
+        padding: 0px;
+    }
+    /* reviews */
+}
+
+@media (max-width: 326px) {}

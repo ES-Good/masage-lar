@@ -18,6 +18,9 @@ use Illuminate\Support\Facades\Route;
 //    return $request->user();
 //});
 
+Route::post('order-quiz',[\App\Http\Controllers\API\OrderController::class,'quizStore']);
+Route::post('order',[\App\Http\Controllers\API\OrderController::class,'store']);
+
 Route::prefix('sanctum')->group(function() {
     Route::post('register', [\App\Http\Controllers\API\AuthController::class,'register']);
     Route::post('token', [\App\Http\Controllers\API\AuthController::class,'token']);

@@ -43,3 +43,5 @@
         <!-- End Facebook Pixel Code -->
     @endforeach
 @endif
+<!-- /Callibri counter -->
+<script src="//cdn.callibri.ru/callibri.js" type="text/javascript" charset="utf-8"></script>
