@@ -528,7 +528,7 @@
         display: flex;
         justify-content: center;
         margin-bottom: 0px;
-        align-items: start;
+        align-items: flex-start;
         flex-direction: column;
     }
     .footer-main__top img {

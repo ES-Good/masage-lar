@@ -37,8 +37,10 @@ export default {
 
           async checkAuth({commit}){
               try {
-                  const response = await axios.post('/api/check')
-                  commit('authorized',response.data)
+                  if (localStorage.getItem('token')) {
+                      const response = await axios.post('/api/check')
+                      commit('authorized', response.data)
+                  }
 
               } catch (e) {
                   commit('logoutApp')

@@ -17,12 +17,12 @@ const routes = [
     meta: { layout: "auth" },
     component: () => import("../views/Login.vue")
   },
-  {
-    path: "/admin/register",
-    name: "register",
-    meta: { layout: "auth" },
-    component: () => import("../views/Register.vue")
-  },
+  // {
+  //   path: "/admin/register",
+  //   name: "register",
+  //   meta: { layout: "auth" },
+  //   component: () => import("../views/Register.vue")
+  // },
   {
     path: "/admin/categories",
     name: "categories",

@@ -10,6 +10,9 @@
     >
       <a href="#" class="waves-effect waves-red pointer">{{ link.title }}</a>
     </router-link>
+
+      <a href="https://ldigital.ru" target="_blank"><img class="materialboxed" src="/img/admin/logo/logo.png"></a>
+
   </ul>
 </template>
 <script>
@@ -26,3 +29,11 @@ export default {
   })
 };
 </script>
+<style scoped>
+.app-sidenav img{
+    width: 50px;
+    margin: 0 auto;
+    padding: 20px 0px;
+    cursor:pointer;
+}
+</style>
