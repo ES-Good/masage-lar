@@ -1,9 +1,9 @@
-<template>
+<template xmlns="http://www.w3.org/1999/html">
   <div>
     <div class="page-title">
       <h3>Счет</h3>
 
-      <button class="btn waves-effect waves-light btn-small">
+      <button @click="fetch" type="button" class="btn waves-effect waves-light btn-small blue lighten-1">
         <i class="material-icons">refresh</i>
       </button>
     </div>
@@ -12,35 +12,37 @@
       <div class="col s12 m6 l4">
         <div class="card light-blue bill-card">
           <div class="card-content white-text">
-            <span class="card-title">Счет в валюте</span>
+            <span class="card-title">Всего заявок сегодня</span>
 
             <p class="currency-line">
-              <span>12.0 Р</span>
+              <span>{{ orders.length }}</span>
             </p>
           </div>
         </div>
       </div>
 
-      <div class="col s12 m6 l8">
+      <div v-if="orders.length !== 0" class="col s12 m6 l8">
         <div class="card orange darken-3 bill-card">
           <div class="card-content white-text">
             <div class="card-header">
-              <span class="card-title">Курс валют</span>
+              <span class="card-title">Последние 3 заявки</span>
             </div>
             <table>
               <thead>
                 <tr>
-                  <th>Валюта</th>
-                  <th>Курс</th>
+                  <th>Имя </th>
+                  <th>Телефон</th>
                   <th>Дата</th>
                 </tr>
               </thead>
 
               <tbody>
-                <tr>
-                  <td>руб</td>
-                  <td>12121</td>
-                  <td>12.12.12</td>
+                <tr v-for="(order, index) in orders" :key="index">
+                    <td v-if="index < 3">{{ order.name}}</td>
+                    <td v-if="index < 3">+{{ order.phone }}</td>
+                    <td v-if="index < 3">
+                        {{ new Date(order.created_at) | date('datetime') }}
+                    </td>
                 </tr>
               </tbody>
             </table>
@@ -53,10 +55,18 @@
 <script>
 export default {
     name: 'Home',
+    data: () => ({
+        orders:'',
+    }),
     methods:{
         fetch(){
-            axios.get('/api/orders').then(response => {
+            axios.get('/api/orders', {
+                params:{
+                    today: true
+                }
+            }).then(response => {
                 console.log(response.data.length)
+                this.orders = response.data
             })
         }
     },
@@ -65,3 +75,8 @@ export default {
     }
 }
 </script>
+<style scoped>
+.btn-journal{
+    margin: 0 auto;
+}
+</style>

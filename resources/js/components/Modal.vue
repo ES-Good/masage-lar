@@ -104,7 +104,7 @@ export default {
                     if(response.status === 200) {
                         $('#staticBackdrop').modal('hide')
                         //console.log(response.data)
-                        ym(71179093,'reachGoal','order')
+                        ym(71320585,'reachGoal','order')
                         fbq('track', 'Contact')
                         setTimeout( () => this.$store.dispatch('viewOrHideThanks') , 500)
                     }

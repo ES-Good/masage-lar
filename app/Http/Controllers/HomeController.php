@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Order;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -28,4 +29,5 @@ class HomeController extends Controller
         return $request->all();
         //\Mail::to(env('MAIL_TO_ADDRESS'))->send(new SendMail($name,$phone));
     }
+
 }

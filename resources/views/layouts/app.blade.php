@@ -17,7 +17,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Помощь в получении кредита в Москве</title>
+    <title>Помощь в получении кредита в Нижнем Новгороде</title>
 
     <!-- Scripts -->
     <script src="{{ mix('js/app.js') }}" defer></script>
@@ -35,8 +35,8 @@
     </div>
     @include('layouts._counters', [
         'counters' => [
-            'facebook' =>[144132727266022],
-            'yandexMetrika' => [71179093],
+            'facebook' =>[],
+            'yandexMetrika' => [71320585],
             'google' => []
             ]
             ])

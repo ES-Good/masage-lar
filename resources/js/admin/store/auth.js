@@ -29,7 +29,8 @@ export default {
                   const response = await axios.post('/api/sanctum/token',formData)
                   localStorage.setItem('token',response.data.token)
                   commit('authorized',response.data)
-                  router.push({name:'Home'})
+                  window.location.href = '/admin'
+                  //router.push({name:'Home'})
               } catch (e) {
                   throw e;
               }

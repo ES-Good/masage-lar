@@ -22,8 +22,22 @@ class OrderFilter extends QueryFilter
     }
 
     public function date($value){
-        //$this->builder->whereDate('created_at','=', $value);
-        $this->builder->whereDate('created_at','>=', Carbon::parse('2020-12-30 00:00:00'))->whereDate('created_at','<=', Carbon::parse('2021-01-01 00:00:00'));
+        //$from = $this->request['date'][0];
+        $from =  Carbon::parse($this->request['date'][0])->addDay(1)->toDateString();
+        $to = Carbon::parse($this->request['date'][1])->addDay(1)->toDateString();
+        //dd($from);
+        //dd(Carbon::createFromFormat('Y-m-d', $value, 'Europe/Moscow'));
+        //dd(Carbon::parse($value)->setTimezone('Europe/Moscow')->format('Y-m-d'));
+        //if ($from === $to)
+          //  $this->builder->whereDate('created_at','=', Carbon::parse($value)->addDay(1)->setTimezone('Europe/Moscow')->format('Y-m-d'));
+        //else
+        //$this->builder->whereDate('created_at','>=', $value);
+        $this->builder->whereDate('created_at','>=', $from)->whereDate('created_at','<=', $to);
         //$this->builder->whereBetween('created_at',[Carbon::yesterday(),Carbon::now()]);
+        //$this->builder->whereBetween('created_at',[$from,$to]);
+    }
+
+    public function today($value){
+       $this->builder->whereDate('created_at',Carbon::today());
     }
 }

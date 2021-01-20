@@ -16,20 +16,8 @@ use Illuminate\Support\Facades\Mail;
 class OrderController extends Controller
 {
     public function index(Request $request, OrderFilter $filter){
-        //$query = Order::query();
-        //$orders = (new OrderFilter($query,$request))->apply()->get();
-        $orders = Order::filter($filter)->get();
-        //$orders = Order::whereDate('created_at', '=', Carbon::yesterday())->get();
-        //$orders = Order::where('name','like','%Mark%')->get();
+        $orders = Order::filter($filter)->orderByDesc('created_at')->get();
 
-        //$query->where('name','like', "%MRs%");
-
-        //$orders = Carbon::today()->toDateString();
-        //$orders->where('name','like', 't')->get();
-//        if ($request->has('name')){
-//            $orders->where('name','like',"%$request->name%");
-//        }
-        //$orders = $query->get();
         return response()->json($orders);
     }
 
@@ -42,9 +30,9 @@ class OrderController extends Controller
         ]);
         $name = $request->input('name');
         $phone = $request->input('phone');
-
+        $this->createOrder($name,$phone);
         Mail::to(env('MAIL_TO_ADDRESS'))->send(new SendMail($name,$phone));
-        $this->addNewLeadSpecialCRM($request ,$name,$phone,'','');
+       // $this->addNewLeadSpecialCRM($request ,$name,$phone,'','');
         return  response()->json($request->all(),200);
     }
 
@@ -57,11 +45,16 @@ class OrderController extends Controller
         $phone = $request->input('phone');
         $data = $request->input('data');
 
+        $this->createOrder('Без имени',$phone);
         Mail::to(env('MAIL_TO_ADDRESS'))->send(new SendMailQuiz($data,$phone));
-        $this->addNewLeadSpecialCRM($request ,'Новый клиент',$phone,'','');
+       // $this->addNewLeadSpecialCRM($request ,'Новый клиент',$phone,'','');
         return  response()->json($request->all(),200);
     }
 
+    public function createOrder($name,$phone){
+        $order = new Order();
+        $order->createOrder($name,$phone);
+    }
 
     public function addNewLeadSpecialCRM(Request $request,$name, $phone, $comment, $utm)
     {

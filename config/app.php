@@ -67,8 +67,8 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
-
+    //'timezone' => 'Etc/UTC',
+    'timezone' => 'Europe/Moscow',
     /*
     |--------------------------------------------------------------------------
     | Application Locale Configuration

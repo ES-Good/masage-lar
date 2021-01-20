@@ -10,11 +10,11 @@ import "./bootstrap";
 import "materialize-css/dist/js/materialize.min";
 
 
+
 Vue.use(Vuelidate);
 Vue.use(messagePlugin);
 Vue.use(Vuex);
 Vue.filter('date', dateFilter);
-
 const app = new Vue({
     router,store,
     render: h => h(App),

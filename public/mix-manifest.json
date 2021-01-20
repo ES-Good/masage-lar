@@ -1,8 +1,14 @@
 {
-    "/js/admin-app.js": "/js/admin-app.js",
-    "/css/app.css": "/css/app.css",
-    "/css/main.css": "/css/main.css",
-    "/css/media.css": "/css/media.css",
-    "/js/app.js": "/js/app.js",
-    "/js/other_script.js": "/js/other_script.js"
+    "/js/admin-app.js": "/js/admin-app.js?id=c167999a383ad037fcfb",
+    "/css/app.css": "/css/app.css?id=0a960a7d6d300aaea61b",
+    "/css/main.css": "/css/main.css?id=6de65f6acdccfeadf572",
+    "/css/media.css": "/css/media.css?id=c998187c3b16f5102749",
+    "/js/admin-app.js.map": "/js/admin-app.js.map?id=5ce9d14082fd7a61a279",
+    "/css/app.css.map": "/css/app.css.map?id=3fdd9fbf52e052e25b3c",
+    "/css/main.css.map": "/css/main.css.map?id=903207e8092bf12ef8ef",
+    "/css/media.css.map": "/css/media.css.map?id=e139d4ca4e4cd01efa57",
+    "/js/app.js": "/js/app.js?id=c8bb437c1a5fd215ff11",
+    "/js/app.js.map": "/js/app.js.map?id=cbc0e0d3b164259c2d8b",
+    "/js/other_script.js": "/js/other_script.js?id=661667a5af93c6a0f8a7",
+    "/js/other_script.js.map": "/js/other_script.js.map?id=8560762ace259ee08f70"
 }

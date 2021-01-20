@@ -13,13 +13,13 @@
 
     <section class="navigation">
         <p class="header-text-top" data-toggle="modal" data-target="#staticBackdrop">
-            Помощь в получении кредита в Казани
+            Помощь в получении кредита в Нижнем Новгороде
         </p>
 
         <div class="container-fluid px-0 fixed-nav">
             <div class="container">
                 <nav class="navbar navbar-expand-md navbar-light">
-                    <a class="navbar-brand" href="#"><img src="./img/header/logo.svg" alt=""></a>
+                    <a class="navbar-brand" href="/"><img src="./img/header/logo.svg" alt=""></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <img src="./img/header/burger.png" alt="menu">
                     </button>
@@ -71,7 +71,7 @@
                 <img class="woman-money" src="./img/header/woman-money.png" alt="woman">
                 <div class="percent-right-block">
                     <p class="percent__information mb-4"><span>Без проверки кредитной истории</span> <br> Нам не важно на сколько плохая у Вас кредитная история</p>
-                    <p class="percent__information mb-4"><span>Без официального трудоустройства</span> <br> У нас вы можете оформить от 100 тыс. до 5 млн. руб.</p>
+                    <p class="percent__information mb-4"><span>Без официального трудоустройства</span> <br> У нас вы можете оформить от 100 тыс. до 20 млн. руб.</p>
                     <p class="percent__information"><span>Кредит на любые цели</span> <br> Кредит на выгодных условиях и без дополнительных услуг</p>
                 </div>
                 <div class="percent-fixed position-fixed d-flex d-sm-none">
@@ -90,7 +90,7 @@
                 <div class="calc__box calc__card-box">
                     <div class="calc__card calc__card--blue">
                         <div class="calc__img"><img src="img/calc/money.png" alt="money"></div>
-                        <p class="calc__text">Помогли взять </br> более <strong>15 МЛН РУБЛЕЙ</strong></p>
+                        <p class="calc__text">Помогли взять </br> более <strong>15 МЛРД РУБЛЕЙ</strong></p>
                     </div>
                     <!-- /.calc__card -->
                     <div class="calc__card calc__card--green">
@@ -387,7 +387,7 @@
                 <div class="row info__info-row">
                     <div class="info__info-box">
                         <p class="info__info-text">Компания <strong>«Одобрение»</strong> работает исключительно в Ваших интересах, на результат в одобрение и выдаче кредитов своим клиентам. Обратившись к нам, вы в первую очередь получаете консультацию от ведущих профессионалов
-                            рынка, так как у нас работают люди исключительно с финансовым и экономическим образованием, бывшие сотрудники банков в городе Москва, которые имеют огромный опыт и знания банковской системы изнутри.</p>
+                            рынка, так как у нас работают люди исключительно с финансовым и экономическим образованием, бывшие сотрудники банков в городе Нижний Новгород, которые имеют огромный опыт и знания банковской системы изнутри.</p>
                         <div class="info__info-img-box">
                             <div><img src="img/information/certificate.png" alt="certificate"></div>
                             <div><img src="img/information/certificate.png" alt="certificate"></div>
@@ -418,7 +418,7 @@
 
                 <div class="info__help-box">
                     <h3 class="info__help-title">НУЖНА ПОМОЩЬ</h3>
-                    <p class="info__help-subtitle">В ПОЛУЧЕНИИ КРЕДИТА В МОСКВЕ?</p>
+                    <p class="info__help-subtitle">В ПОЛУЧЕНИИ КРЕДИТА В НИЖНЕМ НОВГОРОДЕ?</p>
                     <p class="info__help-text">С нами вы получите одобрение по кредиту <span class="info__help-text--first"><span class="info__help-text--second">по ставке от 4%,</span> даже с плохой кредитной историей</span>
                     </p>
                     <div class="row info__help-connection">
@@ -716,14 +716,14 @@
                             </p>
                         </div>
                         <p class="schedule--address">
-                            г. Москва, ул. Кремлевская, д. 12, оф. 512
+                            г. Нижний Новгород, ул. Кремлевская, д. 12, оф. 512
                         </p>
                     </div>
                 </div>
 
                 <div class="footer-text">
                     <p class="text-footer mb-4">Не является публичной офертой </p>
-                    <p class="text-footer__bottom">Не является публичной офертой Подбор кредитно-финансовых услуг, квалифицированная помощь юристов</p>
+                    <p class="text-footer__bottom">Подбор кредитно-финансовых услуг, квалифицированная помощь юристов</p>
                 </div>
             </div>
         </div>

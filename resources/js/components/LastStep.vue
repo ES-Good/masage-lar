@@ -86,7 +86,7 @@ export default {
                     if(response.status === 200) {
                         console.log(response.data)
                         this.isAlert = true
-                        ym(71179093,'reachGoal','order-quiz')
+                        ym(71320585,'reachGoal','order-quiz')
                         fbq('track', 'Contact')
                     }
                 })
