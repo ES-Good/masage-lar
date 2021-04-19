@@ -12,7 +12,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', [\App\Http\Controllers\HomeController::class,'index']);
+Route::get('/', [\App\Http\Controllers\HomeController::class,'home']);
+Route::get('/contacts', [\App\Http\Controllers\HomeController::class,'contacts']);
+Route::get('/interior', [\App\Http\Controllers\HomeController::class,'interior']);
+Route::get('/questionnaires', [\App\Http\Controllers\HomeController::class,'questionnaires']);
+Route::get('/services', [\App\Http\Controllers\HomeController::class,'services']);
+Route::get('/stocks', [\App\Http\Controllers\HomeController::class,'stocks']);
 //indexRoute::post('/', [\App\Http\Controllers\HomeController::class,'store']);
 //Route::get('/test', [\App\Http\Controllers\HomeController::class,'test']);
 
@@ -23,6 +28,7 @@ Route::group(
         //'middleware' => ['auth']
     ],
     function (){
+        Route::get('export/', [\App\Http\Controllers\API\OrderController::class,'export']);
         Route::get('{vue?}', function () {
             return view('admin.index');
         })->where('vue', '.*');

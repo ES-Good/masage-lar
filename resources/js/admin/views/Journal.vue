@@ -4,18 +4,10 @@
       <h3>Журнал записей</h3>
     </div>
 
-    <div v-if="orders.length !== 0" class="filter-form">
+    <div class="filter-form">
         <b>Фильтр</b>
         <form>
             <div class="row">
-<!--                <div class="input-field col s2">-->
-<!--                    <input v-model="name" id="first_name" type="text" class="validate">-->
-<!--                    <label for="first_name">Имя</label>-->
-<!--                </div>-->
-<!--                <div class="input-field col s2">-->
-<!--                    <input v-model="phone" id="last_name" type="text">-->
-<!--                    <label for="last_name" class="">Телефон</label>-->
-<!--                </div>-->
                 <div class="input-field col s2">
                         <select v-model="status">
                             <option value="" disabled selected>Выбрать статус</option>
@@ -38,9 +30,11 @@
                        Применить
                     </button>
                 </div>
-<!--                <div class="input-field col s3">-->
-<!--                    <button type="submit" class="btn waves-effect waves-light btn-small red lighten-1"><i class="material-icons">refresh</i></button>-->
-<!--                </div>-->
+                <div class="input-field col s3">
+                    <button class="btn waves-effect waves-light red" type="submit" name="action" @click.prevent="exportExcel">
+                        Экспорт
+                    </button>
+                </div>
             </div>
         </form>
     </div>
@@ -53,11 +47,12 @@
         <thead>
           <tr>
             <th>#</th>
-            <th>Имя</th>
+            <th>ФИО</th>
             <th>Телефон</th>
+            <th>Сумма</th>
+            <th>Город</th>
             <th>Статус</th>
             <th>Дата создания</th>
-<!--            <th>Открыть</th>-->
           </tr>
         </thead>
         <tbody>
@@ -66,15 +61,12 @@
             <td>{{ ++index }}</td>
             <td>{{ order.name}}</td>
             <td>{{ order.phone }}</td>
+            <td>{{ order.summa}}</td>
+            <td>{{ order.city }}</td>
             <td><span class="white-text badge red" :class="{'red': order.status === 'cancel', 'green': order.status === 'new'}">{{ filterStatus(order.status) }}</span></td>
             <td>
                 {{ new Date(order.created_at) | date('datetime') }}
             </td>
-<!--            <td>-->
-<!--              <button class="btn-small btn">-->
-<!--                <i class="material-icons">open_in_new</i>-->
-<!--              </button>-->
-<!--            </td>-->
           </tr>
         </tbody>
       </table>
@@ -108,6 +100,7 @@ export default {
     },
     methods:{
         async fetch(){
+            console.log(this.dateRange)
             this.isLoad = true
            await axios.get('/api/orders',{
                params:{
@@ -117,10 +110,21 @@ export default {
                    date: this.dateRange
                }
            }).then(response => {
-                console.log(response.data.length)
+                console.log(response.data)
                 this.orders = this.uniquePhone ? this.uniqueOrders(response.data) : response.data
                 this.isLoad = false
             })
+        },
+        exportExcel(){
+            if (this.dateRange[0] === null && this.dateRange[1] === null) return false
+                window.location = 'export/?date[]='+this.filterDateRange(this.dateRange[0])+'&date[]='+this.filterDateRange(this.dateRange[1])
+        },
+        filterDateRange(date){
+            let d = new Date(date);
+            let ye = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(d);
+            let mo = new Intl.DateTimeFormat('en', { month: 'short' }).format(d);
+            let da = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(d);
+            return `${da}-${mo}-${ye}`;
         },
         filterStatus(value){
             if (value === 'new')
@@ -146,7 +150,9 @@ export default {
     mounted() {
         const select = document.querySelectorAll('select');
         const selectInstances = M.FormSelect.init(select);
-
+        const today = new Date;
+        today.setHours(0);
+        this.dateRange = [today,today]
         this.fetch()
     }
 }

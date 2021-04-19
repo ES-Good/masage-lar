@@ -1,0 +1,155 @@
+*
+    margin: 0
+img
+    max-width: 100%
+    height: auto
+body
+    background-color: $light
+.section
+    padding-left: 20px
+    padding-right: 20px
+    &__title
+        font-family: 'Gilroy-Black'
+        font-style: normal
+        font-weight: normal
+        font-size: 48px
+        line-height: 61px
+        color: $dark
+    &__subtitle
+        font-family: 'Gilroy-Medium'
+        font-style: normal
+        font-weight: normal
+        font-size: 36px
+        line-height: 44px
+        color: $dark
+.button
+    font-family: 'Gilroy-Bold'
+    font-style: normal
+    font-weight: normal
+    font-size: 16px
+    line-height: 20px
+    text-align: center
+    color: $white
+    background: linear-gradient(0deg, #653CBC 0%, #8A5EEA 100%)
+    box-shadow: 0px 18px 40px -20px #502BA0
+    border-radius: 16px
+    padding: 15px 20px
+    border: none
+    cursor: pointer
+    transition: 0.3s
+    &:focus
+        outline: none
+    &:hover
+        background: linear-gradient(0deg, #653CBC 0%, #2e0c77 100%)
+    &--gray
+        color: $dark
+        background: $gray
+        box-shadow: none
+        &:hover
+            background: darken($gray, 10%)
+
+.subtitle-purple
+    font-family: 'Gilroy-Regular'
+    font-style: normal
+    font-weight: normal
+    font-size: 24px
+    line-height: 29px
+    text-align: center
+    color: $purple
+    max-width: 1050px
+    margin: auto
+    margin-bottom: 7vw
+
+.position-relative
+    position: relative
+
+.parallelogram
+    margin-left: 20px
+    background-color: $purple
+    color: #fff
+    padding: 5px 20px
+    border-radius: 5px
+    transform: skew(-15deg)
+    p
+        transform: skew(15deg)
+
+.chack-mas
+    fill: #A1A1A1
+
+.form-container
+    position: relative
+    border: 1px solid #653CBC
+    border-radius: 15px
+    background-color: #fff
+    z-index: 4
+    position: relative
+    padding: 40px 30px
+
+.substrate
+    background-color: #653CBC
+    position: absolute
+    width: 50%
+    height: 90%
+    top: 50%
+    transform: translateY(-50%)
+    border-radius: 15px
+    left: -10px
+    z-index: 1
+
+.form
+    @include f-fam-Gil-R
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    .input
+        margin-bottom: 15px
+        padding: 15px 30px
+        border-radius: 15px
+        outline: none
+        border: 1px solid #E0E0E0
+
+    &__title
+        text-align: center
+        font-size: 24px
+        font-weight: 400
+        margin-bottom: 20px
+
+    &__radio-container
+        display: flex
+        &__title
+            color: #595959
+            font-weight: 400
+            margin: 30px 0 15px
+
+    input[type=radio]
+        display: none
+
+    label
+        cursor: pointer
+        line-height: 34px
+        user-select: none
+        display: flex
+        width: 50px
+        height: 50px
+        justify-content: center
+        align-items: center
+
+    input[type=radio]:checked + label
+        border: 2px solid #653CBC
+        border-radius: 50%
+
+    input[type=radio]:checked + label svg path
+        fill: #653CBC
+
+    &__footer
+        margin-top: 20px
+        p
+            text-align: center
+            color: #595959
+            font-size: 14px
+            margin-top: 10px
+
+
+.text-center
+    text-align: center

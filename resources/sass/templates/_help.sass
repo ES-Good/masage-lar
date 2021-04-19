@@ -1,0 +1,71 @@
+.help
+    background-color: $light
+    padding-bottom: 140px
+    position: relative
+    &__subtitle
+        font-family: 'Gilroy-Bold'
+        margin-bottom: 0
+    &__inner
+        width: 100%
+
+    &__row
+        justify-content: center
+        flex-wrap: wrap
+    
+    &__title
+        text-align: center
+    &__inner
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        margin: 4vw 0
+    &__box
+        width: 255px
+        &__header
+            display: flex
+            justify-content: center
+            margin-bottom: 20px
+            div
+                position: relative
+        &__discription
+            @include f-fam-Gil-R
+            font-size: 18px
+            text-align: center
+        &__num
+            @include f-fam-Gil-Bo
+            font-size: 16px
+            position: absolute
+            color: #C7D0E0
+            top: 0
+            right: 0
+    &__screen
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+        bottom: -200px
+        width: 80%
+        display: flex
+        justify-content: center
+
+        &__inner
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%,-50%)
+            height: 80%
+            max-width: 1500px
+            width: 80%
+
+            p
+                color: #fff
+                font-size: 24px
+                @include f-fam-Gil-R
+                position: absolute
+                top: 50%
+                transform: translateY(-50%)
+                text-align: center
+
+        img
+            max-width: 1500px
+            width: 100%
+            margin: 0 auto

@@ -20,6 +20,29 @@
                 <div class="btn-group h-auto btn-group-toggle d-flex flex-column flex-wrap">
                     <div class="invalid-feedback-head">
                         <input
+                            v-model="name"
+                            :class="{'is-invalid':($v.name.$dirty && !$v.name.required) || ($v.name.$dirty && !$v.name.minLength)}"
+                            id="quiz-name"
+                            class="input--number mb-2"
+                            type="text"
+                            placeholder="Имя">
+                        <div  class="invalid-feedback" v-if="!$v.name.required">Обязательное поле.</div>
+                        <div  class="invalid-feedback" v-else-if="!$v.name.minLength">Имя должно быть больше 3 букв</div>
+                    </div>
+                    <div class="invalid-feedback-head">
+                        <select
+                        form="modal-form"
+                        class="mb-4 mt-2 pl-4 py-3 w-100 select-style select-style-quiz"
+                        v-model="cities"
+                        name="cities"
+                        >   
+                            <option v-for="option in options">
+                                {{ option.text }}
+                            </option>
+                        </select>
+                    </div>
+                    <div class="invalid-feedback-head">
+                        <input
                             v-model="phone"
                             :class="{'is-invalid':($v.phone.$dirty && !$v.phone.required) || ($v.phone.$dirty && !$v.phone.isPhone)}"
                             :disabled="isAlert||isDisabled"
@@ -56,9 +79,17 @@ import {minLength, required} from "vuelidate/lib/validators";
 export default {
     name: "LastStep",
     data:() => ({
+        name: '',
         phone: '',
+        cities: 'Москва',
+        options: [
+            { text: 'Москва', value: 'Москва' },
+            { text: 'Московская область', value: 'Московская область' },
+            { text: 'Другой город', value: 'Другой город' }
+        ],
         isDisabled: false,
-        isAlert: false
+        isAlert: false,
+        counters: null
     }),
     computed:{
         getData(){
@@ -67,6 +98,7 @@ export default {
     },
     methods:{
         clearData() {
+            this.name = '';
             this.phone = '';
         },
         addOrder(){
@@ -76,6 +108,7 @@ export default {
             }
             this.isDisabled = true
             axios.post('/api/order-quiz',{
+                name:this.name,
                 phone: this.phone.replace(/\D/g, ""),
                 data: this.getData
             })
@@ -86,8 +119,8 @@ export default {
                     if(response.status === 200) {
                         console.log(response.data)
                         this.isAlert = true
-                        ym(71320585,'reachGoal','order-quiz')
-                        fbq('track', 'Contact')
+                        if (this.counters.ym) ym(this.counters.ym,'reachGoal','order')
+                        if (this.counters.fbq) fbq('track', 'Contact')
                     }
                 })
                 .catch( error => {
@@ -98,6 +131,17 @@ export default {
         }
     },
     validations: {
+        name: { required , minLength: minLength(3)},
+        cities:{
+            isCity: (cities) =>{
+                if (cities == 'Другой город') {
+                    alert('Извените но мы не работаем с другими городами');
+                    return false;
+                }else{
+                    return true;
+                }
+            }
+        },
         phone: {
             required,
             isPhone: (phone)=> {
@@ -109,6 +153,13 @@ export default {
                 return false
             }
         }
+    },
+    created() {
+        axios.get('/api/counters').then(response => {
+            this.counters = response.data
+        }).catch( error => {
+            console.log(error.message)
+        })
     },
     mounted() {
         Inputmask({"mask": "+7 (999) - 999 - 99 - 99"}).mask("#quiz-phone");
@@ -131,8 +182,8 @@ button[type="submit"]:disabled{
 }
 .invalid-feedback{
     position:absolute;
-    top: -1.5rem;
-    left: 0;
+    top: -0.1rem;
+    left: 0.5rem;
     width: 100%;
 }
 </style>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Exports\OrdersExport;
 use App\Http\Controllers\Controller;
 use App\Http\Filters\OrderFilter;
 use App\Mail\SendMail;
@@ -12,6 +13,7 @@ use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
+use Maatwebsite\Excel\Facades\Excel;
 
 class OrderController extends Controller
 {
@@ -20,19 +22,29 @@ class OrderController extends Controller
 
         return response()->json($orders);
     }
+    public function export(Request $request)
+    {
+
+        //dd(Carbon::parse($request['date'][0])->toDateString());
+        return Excel::download(new OrdersExport($request), Carbon::now().'leads.xlsx');
+        //return (new OrdersExport)->download('orders.xlsx');
+    }
 
     public function store(Request $request){
 
         $this->validate($request,[
             'name' => 'required|min:3',
             'phone' => 'required|regex:/^\d(\d{3})(\d{3})(\d{4})$/',
+            'summa' => 'required|integer',
             'checkbox' => 'required|in:1'
         ]);
         $name = $request->input('name');
         $phone = $request->input('phone');
-        $this->createOrder($name,$phone);
-        Mail::to(env('MAIL_TO_ADDRESS'))->send(new SendMail($name,$phone));
-       // $this->addNewLeadSpecialCRM($request ,$name,$phone,'','');
+        $summa = $request->input('summa');
+        $city = $request->input('city');
+
+        $this->createOrder($name,$phone,$summa,$city);
+        Mail::to(env('MAIL_TO_ADDRESS'))->send(new SendMail($name,$phone,$city,$summa));
         return  response()->json($request->all(),200);
     }
 
@@ -44,16 +56,20 @@ class OrderController extends Controller
 
         $phone = $request->input('phone');
         $data = $request->input('data');
+        $name = $request->input('name');
+        $city = $request->input('city');
 
-        $this->createOrder('Без имени',$phone);
-        Mail::to(env('MAIL_TO_ADDRESS'))->send(new SendMailQuiz($data,$phone));
+        $this->createOrder($name,$phone,$data[1]['answer'],$city);
+
+
+        Mail::to(env('MAIL_TO_ADDRESS'))->send(new SendMailQuiz($name,$data,$phone, $city));
        // $this->addNewLeadSpecialCRM($request ,'Новый клиент',$phone,'','');
         return  response()->json($request->all(),200);
     }
 
-    public function createOrder($name,$phone){
+    public function createOrder($name,$phone,$summa,$city){
         $order = new Order();
-        $order->createOrder($name,$phone);
+        $order->createOrder($name,$phone,$summa,$city);
     }
 
     public function addNewLeadSpecialCRM(Request $request,$name, $phone, $comment, $utm)

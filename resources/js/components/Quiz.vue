@@ -2,7 +2,7 @@
     <div class="container">
 
         <!-- 1 card -->
-        <div v-if="!lastStep" class="poll-card position-relative">
+        <div v-show="!lastStep" class="poll-card position-relative">
             <div class="substrate-quiz position-absolute"></div>
             <div class="poll-quiz position-relative d-flex align-items-center">
 
@@ -27,7 +27,7 @@
                 </div>
             </div>
         </div>
-        <last-step  v-if="lastStep"></last-step>
+        <last-step  v-show="lastStep"></last-step>
     </div>
 </template>
 

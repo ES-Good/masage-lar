@@ -22,9 +22,32 @@
                                     id="modal-name"
                                     class="mb-4 pl-4 py-3 style-input"
                                     type="text"
-                                    placeholder="Ваше Имя">
+                                    placeholder="Имя">
                                     <div  class="invalid-feedback" v-if="!$v.name.required">Обязательное поле.</div>
                                     <div  class="invalid-feedback" v-else-if="!$v.name.minLength">Имя должно быть больше 3 букв</div>
+                                </div>
+                                <div class="invalid-feedback-head">
+                                    <input
+                                        v-model="summa"
+                                        :class="{'is-invalid':($v.summa.$dirty && !$v.summa.required) || ($v.summa.$dirty && !$v.summa.between)}"
+                                        id="modal-summ"
+                                        class="mb-4 pl-4 py-3 style-input"
+                                        type="text"
+                                        placeholder="Сумма кредита">
+                                    <div  class="invalid-feedback" v-if="!$v.summa.required">Обязательное поле.</div>
+                                    <div  class="invalid-feedback" v-else-if="!$v.summa.between">Сумма кредита от {{$v.summa.$params.between.min}} до {{$v.summa.$params.between.max}}</div>
+                                </div>
+                                <div class="invalid-feedback-head">
+                                    <select
+                                    form="modal-form"
+                                    class="mb-4 pl-4 py-3 w-100 select-style"
+                                    v-model="cities"
+                                    name="cities"
+                                    >   
+                                        <option v-for="option in options">
+                                            {{ option.text }}
+                                        </option>
+                                    </select>
                                 </div>
                                 <div class="invalid-feedback-head">
                                     <input
@@ -69,21 +92,29 @@
 
 <script>
 import Inputmask from "inputmask";
-import { required,minLength } from "vuelidate/lib/validators";
-
+import { required, minLength, between } from "vuelidate/lib/validators";
 export default {
     name: "Modal",
     data:() => ({
         name: '',
         phone: '',
+        cities: 'Москва',
+        options: [
+            { text: 'Москва', value: 'Москва' },
+            { text: 'Московская область', value: 'Московская область' },
+            { text: 'Другой город', value: 'Другой город' }
+        ],
+        summa: '',
         checkbox: true,
         isDisabled: false,
-        isAlert: false
+        isAlert: false,
+        counters: null,
     }),
     methods:{
         clearData() {
             this.name = '';
             this.phone = '';
+            this.summa = '';
             this.checkbox = false;
         },
         addOrder(){
@@ -93,7 +124,8 @@ export default {
             }
             this.isDisabled = true
             axios.post('/api/order',{
-                name: this.name,
+                name:this.name,
+                summa: this.summa,
                 phone: this.phone.replace(/\D/g, ""),
                 checkbox: this.checkbox,
             })
@@ -104,8 +136,8 @@ export default {
                     if(response.status === 200) {
                         $('#staticBackdrop').modal('hide')
                         //console.log(response.data)
-                        ym(71320585,'reachGoal','order')
-                        fbq('track', 'Contact')
+                        if (this.counters.ym) ym(this.counters.ym,'reachGoal','order')
+                        if (this.counters.fbq) fbq('track', 'Contact')
                         setTimeout( () => this.$store.dispatch('viewOrHideThanks') , 500)
                     }
                 })
@@ -117,6 +149,19 @@ export default {
     },
     validations: {
         name: { required , minLength: minLength(3)},
+        summa: {
+            required,between: between(100000, 20000000)
+        },
+        cities:{
+            isCity: (cities) =>{
+                if (cities == 'Другой город') {
+                    alert('Извените но мы не работаем с другими городами');
+                    return false;
+                }else{
+                    return true;
+                }
+            }
+        },
         phone: {
             required,
             isPhone: (phone)=> {
@@ -125,10 +170,17 @@ export default {
                     const digits = phone.replace(/\D/g, "");
                     return phoneRe.test(digits)
                 }
-                return false
+                return false;
             }
         },
         checkbox: { isCheck: (check) => check },
+    },
+    created() {
+        axios.get('/api/counters').then(response => {
+            this.counters = response.data
+        }).catch( error => {
+            console.log(error.message)
+        })
     },
     mounted() {
         Inputmask({"mask": "+7 (999) - 999 - 99 - 99"}).mask("#modal-phone");

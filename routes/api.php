@@ -21,6 +21,9 @@ use Illuminate\Support\Facades\Route;
 Route::post('order-quiz',[\App\Http\Controllers\API\OrderController::class,'quizStore']);
 Route::post('order',[\App\Http\Controllers\API\OrderController::class,'store']);
 
+Route::get('counters', function (){
+    return response()->json(['ym'=>71532358,'fbq'=>''],200);
+});
 
 Route::prefix('sanctum')->group(function() {
     Route::post('register', [\App\Http\Controllers\API\AuthController::class,'register']);

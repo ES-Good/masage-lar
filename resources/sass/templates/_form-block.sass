@@ -1,0 +1,48 @@
+.form-block
+    padding: 300px 0px 100px
+    background-color: $white
+    &__input
+        &-group
+            position: relative
+            & label.invalid
+                color: tomato
+                position: absolute
+                width: auto
+                height: auto
+                bottom: -9px
+                left: 10px
+    &__row
+        justify-content: center
+    &__description
+        margin-right: 10vw
+    &__subtitle
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+    &__list
+        color: $dark
+        font-size: 18px
+        margin: 4vw 0
+        @include f-fam-Gil-R
+
+    &__item
+        list-style: none
+        position: relative
+        margin: 20px 0
+        padding-left: 20px
+
+        &::before
+            content: ''
+            position: absolute
+            top: 0
+            left: -30px
+            width: 32px
+            height: 32px
+            background-image: url(../img/form-block/ico-check.svg)
+            background-repeat: no-repeat
+            background-size: cover
+    &__offer
+        background-color: #E8E2F5
+        padding: 20px 0 20px 40px
+        font-size: 24px
+        @include f-fam-Gil-R

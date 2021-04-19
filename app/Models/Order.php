@@ -11,10 +11,14 @@ class Order extends Model
 {
     use HasFactory;
 
-    public function createOrder($name,$phone){
+    protected $hidden = ['updated_at'];
+
+    public function createOrder($name,$phone,$summ,$city){
         $this->name = $name;
         $this->phone = $phone;
         $this->status = 'new';
+        $this->summa = $summ;
+        $this->city = $city;
         $this->save();
 
     }

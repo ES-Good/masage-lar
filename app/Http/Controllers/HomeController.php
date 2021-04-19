@@ -13,21 +13,32 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function home()
     {
         return view('home');
     }
-
-    public function store (Request $request){
-        $this->validate($request,[
-            'name' => 'required|min:3',
-            'phone' => 'required|regex:/^\d(\d{3})(\d{3})(\d{4})$/',
-            'checkbox' => 'required|in:1'
-        ]);
-        $name = $request->input('name');
-        $phone = $request->input('phone');
-        return $request->all();
-        //\Mail::to(env('MAIL_TO_ADDRESS'))->send(new SendMail($name,$phone));
+    public function contacts()
+    {
+        return view('contacts');
     }
-
+    public function interior()
+    {
+        return view('interior');
+    }
+    public function questionnaires()
+    {
+        return view('questionnaires');
+    }
+    public function services()
+    {
+        return view('services');
+    }
+    public function stocks()
+    {
+        return view('stocks');
+    }
+    public function quiz()
+    {
+        return view('quiz');
+    }
 }

@@ -13,15 +13,19 @@ class SendMailQuiz extends Mailable
 
     public $data;
     public $phone;
+    public $city;
+    public $name;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($data,$phone)
+    public function __construct($name,$data,$phone,$city)
     {
         $this->data = $data;
         $this->phone = $phone;
+        $this->city = $city;
+        $this->name =$name;
     }
 
     /**
@@ -33,6 +37,11 @@ class SendMailQuiz extends Mailable
     {
         $this->subject = 'Новая заявка!';
         //$this->from('example@example.com' ,'example');
-        return $this->view('mail.sendMailQuiz', ['data' => $this->data,'phone' => $this->phone]);
+        return $this->view('mail.sendMailQuiz', [
+            'name' => $this->name,
+            'data' => $this->data,
+            'phone' => $this->phone,
+            'city' => $this->city
+        ]);
     }
 }

@@ -1700,5 +1700,13 @@ input:focus {
     margin-bottom: 180px;
 }
 
+.select-style{
+    border: 1px solid #C8C8C8;
+    background-color: #fff;
+}
+
+.select-style-quiz{
+    border-radius: 6px;
+}
 
 /* modal */
